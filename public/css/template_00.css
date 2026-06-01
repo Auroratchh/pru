@@ -1,0 +1,239 @@
+:root {
+    --primary-color:#583885;
+    --primary-color-hover:#7B53B3;
+    --primary-rgb-color:  rgb(250, 246, 105);
+}
+
+
+#preloader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 999999;
+    transition: 0.3s ease opacity;
+    text-align: center;
+    width: 100%;
+    height: 100%; }
+#preloader:before {
+    content: "";
+    width: 80px;
+    height: 80px;
+    border: 3px solid var(--primary-color);
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    animation-name: LoaderCicle;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
+#preloader:after {
+    content: "";
+    width: 80px;
+    height: 80px;
+    border: 3px solid var(--primary-color);
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    animation-name: LoaderCicle;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 1s; }
+
+@keyframes LoaderCicle {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0; }
+    10% {
+        width: 10px;
+        height: 10px;
+        opacity: 1; }
+    80% {
+        width: 60px;
+        height: 60px;
+        opacity: 0.1; }
+    100% {
+        width: 70px;
+        height: 70px;
+        opacity: 0; } }
+
+
+.is-invalid{
+    border: 1px solid red !important;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+
+.breadcrumb{
+    margin: 0;
+    padding: 5px 0;
+}
+.breadcrumb a{
+    text-decoration: none;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+section.main-content{
+    padding: 70px 0 60px;
+}
+
+/**************** MENU ADMINISTRACIÓN *****************************************/
+#menu-principal .administracion-item {
+    text-align: center;
+    padding: 20px;
+    background-color: #F9F9F9;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    margin: 0 0 30px;
+    min-height: 235px;
+}
+#menu-principal .administracion-item a {
+    text-decoration: none;
+}
+#menu-principal .administracion-item a i {
+    font-size: 40px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    padding-top: 25px;
+    transition: 0.4s ease-in-out 0s;
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+#menu-principal .administracion-item a:hover i {
+    background-color: #FFF;
+    color: var(--primary-color-hover);
+}
+#menu-principal .administracion-item a .item-body h3 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif !important;
+    color: #555555;
+    transition: 0.3s ease-in-out 0s;
+    margin: 20px 0 10px;
+}
+#menu-principal .administracion-item a .item-body p {
+    font-size: 14px;
+    color: #666666;
+    margin: 0;
+    font-weight: 300;
+}
+
+
+#search{
+    background-color: #f8f9fa;
+    padding: 20px 10px 10px 10px;
+}
+.panel-result {
+    margin-bottom: 30px !important;
+    padding: 20px;
+    background: #F5F5F5;
+    border: 1px solid #e4e4e4;
+    border-radius: 3px;
+}
+.panel-result .panel-result-heading {
+    padding: 5px 0 20px 0;
+    color: #292929;
+    border-bottom: 1px solid #929497;
+    font-family: var(--font-family-title);
+}
+.panel-result .panel-result-heading h3.panel-title {
+    font-size: 24px;
+    font-weight: 900;
+    margin: 0;
+    color: #111;
+}
+.panel-result .panel-result-body {
+    padding: 20px 0 0;
+}
+
+
+.form-amc{
+
+}
+
+.form-amc label{
+
+}
+
+/**************** USUARIOS MULTIMEDIA *****************************************/
+
+.badge-status{
+    font-size: 10px;
+}
+
+/**************** CREATE MULTIMEDIA *****************************************/
+
+#contenedor-videos {
+    margin-top: 50px;
+    min-height: 100px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+#contenedor-videos .videos-uploaded {
+    border: 1px solid #ddd;
+    box-shadow: 1px 1px 5px 0 #a2958a;
+    height: auto;
+    margin: 8px;
+    padding: 6px;
+    position: relative;
+    text-align: center;
+    width: 162px;
+    display: inline-block;
+}
+#contenedor-videos .videos-uploaded .video {
+    height: 100px;
+    text-align: center;
+}
+#contenedor-videos .videos-uploaded .video-name {
+    font-size: 10px;
+    font-weight: 400;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+#contenedor-videos .videos-uploaded .tools {
+    margin-top: 15px;
+    padding: 0 3px;
+}
+#contenedor-videos .videos-uploaded .tools a {
+    color: #a94442;
+}
+
+/**************** CREATE CONFERENCIAS *****************************************/
+.fc-event-time {
+    font-size: 12px;
+}
+.fc-event-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+.fc-event-title .actor {
+    font-size: 12px;
+    font-weight: 400;
+}
+.fc-event-title .bloque {
+    font-size: 10px;
+    font-weight: 400;
+}
+

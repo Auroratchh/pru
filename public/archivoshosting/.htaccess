@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^alpha_venus/public
+
+RewriteRule ^(.*)$ alpha_venus/public/$1 [L]
+
+RewriteCond %{REQUEST_URI} !\.(txt|tmp)$
