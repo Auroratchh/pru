@@ -8,6 +8,8 @@ use App\Http\Controllers\ReporteController;
 use App\Http\Controllers\ReservaAdminController;
 use App\Http\Controllers\ReservaClaseController;
 use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\ProgramacionController;
+use App\Http\Controllers\EjercicioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -99,32 +101,22 @@ Route::patch('admin/gastos/{idGasto}', [GastoController::class, 'update']);
 
 Route::delete('admin/gastos/{idGasto}', [GastoController::class, 'destroy']);
 
-
-/******************************************* ADMIN PROGRAMACION *******************************************/
-Route::get('admin/programacion', [ProgramacionController::class, 'index']);
-
-Route::get('admin/programacion/create', [ProgramacionController::class, 'create']);
-Route::post('admin/programacion', [ProgramacionController::class, 'store']);
-
-Route::get('admin/programacion/show', [ProgramacionController::class, 'show']);
-Route::get('admin/programacion/edit', [ProgramacionController::class, 'edit']);
-Route::patch('admin/programacion/{idProgramacion}', [ProgramacionController::class, 'update']);
-
-Route::patch('admin/programacion/{idProgramacion}', [ProgramacionController::class, 'destroy']);
-
 /******************************************* ADMIN EJERCICIO *******************************************/
 Route::get('admin/ejercicios', [EjercicioController::class, 'index']);
-
 Route::get('admin/ejercicios/create', [EjercicioController::class, 'create']);
 Route::post('admin/ejercicios', [EjercicioController::class, 'store']);
-
 Route::get('admin/ejercicios/show', [EjercicioController::class, 'show']);
 Route::get('admin/ejercicios/edit', [EjercicioController::class, 'edit']);
 Route::patch('admin/ejercicios/{idEjercicio}', [EjercicioController::class, 'update']);
-
 Route::delete('admin/ejercicios/{idEjercicio}', [EjercicioController::class, 'destroy']);
-
-
+/******************************************* ADMIN PROGRAMACION *******************************************/
+Route::get('admin/programaciones', [ProgramacionController::class, 'index']);
+Route::get('admin/programaciones/create', [ProgramacionController::class, 'create']);
+Route::post('admin/programaciones', [ProgramacionController::class, 'store']);
+Route::get('admin/programaciones/{idProgramacion}', [ProgramacionController::class, 'show']);
+Route::get('admin/programaciones/{idProgramacion}/edit', [ProgramacionController::class, 'edit']);
+Route::patch('admin/programaciones/{idProgramacion}', [ProgramacionController::class, 'update']);
+Route::delete('admin/programaciones/{idProgramacion}', [ProgramacionController::class, 'destroy']);
 /******************************************* ADMIN REPORTES *******************************************/
 
 

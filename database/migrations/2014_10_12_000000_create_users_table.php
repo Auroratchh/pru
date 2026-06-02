@@ -6,13 +6,10 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('tbl_usuarios', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('idUsuario');
             $table->integer('idRol')->default(2);
             $table->string('nombre');
             $table->string('apellidoPaterno');
@@ -23,7 +20,6 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('passwordVisible');
-
             $table->string('fechaUltimoPago')->nullable();
             $table->string('fechaProximoPago')->nullable();
             $table->rememberToken();
@@ -31,9 +27,6 @@ return new class extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('tbl_usuarios');
